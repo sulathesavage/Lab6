@@ -1,12 +1,15 @@
 .banner {
   background-image: url("index_banner.webp");
   width: 100%;
-  height: 1000px;
+  height: 56.25rem;
   background-repeat: no-repeat;
+  background-size: 100rem 56.25rem;
+  text-align: center;
+  background-position: center;
 }
 
 .menu {
-  font-size: 15pt;
+  font-size: 44px;
 }
 
 a {
@@ -17,19 +20,19 @@ a {
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 a:hover {
-  box-shadow: inset 100px 0 0 0 #54b3d6;
+  box-shadow: inset 8.3rem 0 0 0 #54b3d6;
   color: white;
 }
 
 ul {
   background: #5626c4;
-  padding: 20px;
+  padding: 1.6rem;
 }
 
 ul li {
   background: #f6f4f2;
   color: darkblue;
-  margin: 5px;
+  margin: 0.416rem;
 }
 
 .active {
@@ -40,15 +43,21 @@ ul li {
 }
 
 img {
-  width: 300px;
-  height: 400px;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
+  width: 25rem;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .topic {
-  margin: 5px;
+  margin: 0.416rem;
 }
 
 #task {
@@ -58,14 +67,56 @@ img {
 
 #main-heading {
   text-align: center;
-  padding: 20px;
+  padding: 1.6rem;
 }
 
 #requirements {
-  border: 20px;
+  border: 1.6rem;
 }
 
 body {
   background-color: silver;
-  font-size: 12pt;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 36rem;
+    background-size: 64rem 36rem;
+  }
+  body {
+    font-size: 17px;
+  }
+  .menu {
+    font-size: 24px;
+  }
+  img {
+
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .banner {
+    height: 48rem;
+    background-size: 86.6rem 48rem;
+  }
+  body {
+    font-size: 19px;
+  }
+  .menu {
+    font-size: 34px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  img {
+    float: right;
+    width: 30%;
+  }
+  .menu {
+    width: 60%;
+  }
+  #requirements {
+    width: 70%;
+  }
 }
